@@ -18,7 +18,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-version: '3.14.7'   # or 3.11 / 3.13 — use the version you use locally
+        python-version: '3.12'
 
     - name: Install dependencies
       run: |
@@ -29,9 +29,9 @@ jobs:
       run: python -m playwright install --with-deps
 
     - name: Run Playwright tests
-      run: pytest --tracing=retain-on-failure
+      run: pytest -v --tb=short
 
-    - name: Upload test results (traces, screenshots, videos)
+    - name: Upload test results
       if: ${{ !cancelled() }}
       uses: actions/upload-artifact@v4
       with:
