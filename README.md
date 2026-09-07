@@ -1,1 +1,0 @@
-# sauce-demo-ci
