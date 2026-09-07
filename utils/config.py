@@ -9,7 +9,7 @@ load_dotenv(override=True)
 
 BASE_URL = os.getenv("BASE_URL", "https://www.saucedemo.com/")
 USERNAME = os.getenv("USERNAME", "standard_user")
-PASSWORD = os.getenv("PASSWORD", "secret_sauc")
+PASSWORD = os.getenv("PASSWORD", "secret_sauce")
 
 # Stable catalog item used by cart and checkout tests.
 DEFAULT_PRODUCT = "Sauce Labs Backpack"
